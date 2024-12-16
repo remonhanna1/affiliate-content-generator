@@ -1,0 +1,341 @@
+/* Main Container Styles - Preserving existing */
+.acg-container {
+    margin: 20px 0;
+    max-width: 1200px;
+}
+
+.acg-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Form Styles - Preserving existing */
+.acg-form {
+    max-width: 800px;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+}
+
+/* SEO Analysis Section - New Styles */
+.seo-analysis {
+    margin-top: 30px;
+}
+
+.analysis-progress {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Progress Steps - Enhanced */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.progress-steps:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e2e4e7;
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #e2e4e7;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    border-color: #2271b1;
+    color: #2271b1;
+    font-weight: 500;
+}
+
+.step.completed {
+    border-color: #46b450;
+    color: #46b450;
+}
+
+.step.completed:after {
+    content: '✓';
+    margin-left: 5px;
+}
+
+/* Progress Bar - Enhanced */
+.progress-bar {
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #2271b1;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.progress-status {
+    text-align: center;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Keyword Analysis Section - New */
+.keyword-analysis {
+    margin-top: 30px;
+}
+
+.keywords-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.keywords-section h3 {
+    margin-top: 0;
+    color: #2271b1;
+    border-bottom: 2px solid #e2e4e7;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Keywords Table - New */
+.keywords-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.keywords-table th,
+.keywords-table td {
+    padding: 12px;
+    border: 1px solid #e2e4e7;
+    text-align: left;
+}
+
+.keywords-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+.keywords-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Opportunity Score - New */
+.opportunity-score {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.score-bar {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(to right, #2271b1, #46b450);
+    transition: width 0.3s ease;
+}
+
+.score-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* Content Structure - New */
+.content-structure-preview {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #e2e4e7;
+    border-radius: 8px;
+}
+
+.suggested-title {
+    font-size: 1.2em;
+    color: #2271b1;
+    margin: 15px 0;
+}
+
+.suggested-sections {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggested-sections li {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.section-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 10px;
+}
+
+/* Optimization Tips - New */
+.optimization-suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.optimization-suggestions li {
+    margin: 10px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 4px solid #2271b1;
+}
+
+.suggestion-type {
+    font-weight: 600;
+    color: #2271b1;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Priority Indicators - New */
+.suggestion-high {
+    border-left-color: #2271b1;
+}
+
+.suggestion-medium {
+    border-left-color: #46b450;
+}
+
+.suggestion-low {
+    border-left-color: #dba617;
+}
+
+/* Action Buttons - New */
+.opportunity-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e4e7;
+    text-align: right;
+}
+
+.opportunity-actions button {
+    margin-left: 10px;
+}
+
+/* Loading States - Enhanced */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2271b1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-message {
+    margin-top: 15px;
+    color: #666;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .form-row.two-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .progress-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .progress-steps:before {
+        display: none;
+    }
+
+    .keywords-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .step {
+        width: 100%;
+        text-align: center;
+    }
+
+    .opportunity-actions {
+        text-align: center;
+    }
+
+    .opportunity-actions button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

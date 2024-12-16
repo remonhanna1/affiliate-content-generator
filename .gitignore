@@ -1,0 +1,23 @@
+# Development
+/node_modules
+/debug
+*.log
+
+# Build
+/build
+/dist
+
+# Environment
+.env
+.env.*
+
+# WordPress
+wp-config.php
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor folders
+.idea/
+.vscode/

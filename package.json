@@ -1,0 +1,21 @@
+{
+  "name": "affiliate-content-generator",
+  "version": "1.0.0",
+  "description": "Automated affiliate content generation using AI",
+  "main": "build.js",
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=development node build.js",
+    "build:prod": "cross-env NODE_ENV=production node build.js",
+    "watch": "cross-env NODE_ENV=development node build.js --watch",
+    "test": "node test-build.js"
+  },
+  "dependencies": {
+    "terser": "^5.24.0",
+    "postcss": "^8.4.31",
+    "cssnano": "^6.0.1",
+    "autoprefixer": "^10.4.16"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
