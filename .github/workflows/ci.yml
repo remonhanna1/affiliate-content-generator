@@ -19,11 +19,20 @@ jobs:
       with:
         php-version: '8.0'
         extensions: dom, curl, libxml, mbstring, zip, pdo, mysql
+        tools: phpcs
         coverage: none
 
     - name: Check PHP Syntax
       run: |
         find ./src -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+
+    - name: Install Composer Dependencies
+      run: |
+        composer install --prefer-dist --no-progress
+
+    - name: Run PHPCS
+      run: |
+        vendor/bin/phpcs --standard=WordPress ./src
 
     - name: Check File Structure
       run: |
