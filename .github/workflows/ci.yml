@@ -28,7 +28,7 @@ jobs:
 
     - name: Run PHPCS
       run: |
-        phpcs --standard=PSR1 ./src --report=summary --warning-severity=0 --error-severity=10 --ignore=*/vendor/*
+        phpcs --standard=PSR2 ./src --report=summary --warning-severity=0 --error-severity=5 --ignore=*/vendor/* -n
 
     - name: Check File Structure
       run: |
