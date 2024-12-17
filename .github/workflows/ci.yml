@@ -19,7 +19,7 @@ jobs:
       with:
         php-version: '8.0'
         extensions: dom, curl, libxml, mbstring, zip, pdo, mysql
-        tools: phpcs
+        tools: phpcs, composer
         coverage: none
 
     - name: Check PHP Syntax
@@ -33,6 +33,15 @@ jobs:
     - name: Install Composer Dependencies
       run: |
         composer install --no-interaction --prefer-dist
+
+    - name: Setup PHPCS
+      run: |
+        composer require --dev wp-coding-standards/wpcs
+        phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs
+
+    - name: Run PHPCS
+      run: |
+        phpcs --standard=WordPress ./src --report=summary
 
     - name: Check File Structure
       run: |
