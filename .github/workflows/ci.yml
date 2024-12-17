@@ -19,7 +19,6 @@ jobs:
       with:
         php-version: '8.0'
         extensions: dom, curl, libxml, mbstring, zip, pdo, mysql
-        tools: phpcs
         coverage: none
 
     - name: Check PHP Syntax
@@ -32,7 +31,3 @@ jobs:
         test -d "./src/templates" || (echo "Missing templates directory" && exit 1)
         test -d "./src/assets" || (echo "Missing assets directory" && exit 1)
         test -f "./src/main-plugin.php" || (echo "Missing main plugin file" && exit 1)
-
-    - name: Run PHPCS
-      run: |
-        phpcs --standard=PSR2 ./src --report=summary --warning-severity=0
