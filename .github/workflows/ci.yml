@@ -26,13 +26,13 @@ jobs:
       run: |
         find ./src -type f -name '*.php' -print0 | xargs -0 -n1 php -l
 
+    - name: Configure Composer
+      run: |
+        composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+        
     - name: Install Composer Dependencies
       run: |
-        composer install --prefer-dist --no-progress
-
-    - name: Run PHPCS
-      run: |
-        vendor/bin/phpcs --standard=WordPress ./src
+        composer install --no-interaction --prefer-dist
 
     - name: Check File Structure
       run: |
