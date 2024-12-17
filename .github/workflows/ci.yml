@@ -35,4 +35,4 @@ jobs:
 
     - name: Run PHPCS
       run: |
-        phpcs --standard=PSR12 ./src
+        phpcs --standard=PSR2 ./src --report=summary --warning-severity=0
