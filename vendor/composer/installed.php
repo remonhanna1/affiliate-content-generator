@@ -3,7 +3,7 @@
         'name' => 'your-name/affiliate-content-generator',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '74a9d19fd36e51e088186d5be920b4b784f3250f',
+        'reference' => '485c4ce9e59273574d44753a9b7a02ded792ef70',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -40,7 +40,7 @@
         'your-name/affiliate-content-generator' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '74a9d19fd36e51e088186d5be920b4b784f3250f',
+            'reference' => '485c4ce9e59273574d44753a9b7a02ded792ef70',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
