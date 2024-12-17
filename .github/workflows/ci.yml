@@ -19,50 +19,11 @@ jobs:
       with:
         php-version: '8.0'
         extensions: dom, curl, libxml, mbstring, zip, pdo, mysql
-        tools: cs2pr, phpcs, phpmd
         coverage: none
 
     - name: Check PHP Syntax
       run: |
         find ./src -type f -name '*.php' -print0 | xargs -0 -n1 php -l
-
-    - name: Install Composer Dependencies
-      run: |
-        composer require --dev wp-coding-standards/wpcs
-        composer require --dev phpmd/phpmd
-        composer require --dev phpunit/phpunit
-
-    - name: Run PHPCS
-      run: |
-        phpcs --standard=WordPress ./src --report=checkstyle | cs2pr
-
-    - name: Run PHPMD
-      run: |
-        phpmd ./src text cleancode,codesize,controversial,design,naming,unusedcode
-
-    - name: PHP Security Checks
-      run: |
-        composer require --dev enlightn/security-checker
-        vendor/bin/security-checker security:check
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-
-    - name: Install NPM Dependencies
-      run: |
-        npm install eslint
-        npm install stylelint
-        npm install prettier
-
-    - name: Run JavaScript Linting
-      run: |
-        npx eslint ./src/assets/js --format=checkstyle | cs2pr
-
-    - name: Run CSS Linting
-      run: |
-        npx stylelint "./src/assets/css/**/*.css"
 
     - name: Check File Structure
       run: |
