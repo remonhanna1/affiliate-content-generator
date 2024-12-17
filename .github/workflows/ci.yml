@@ -19,29 +19,12 @@ jobs:
       with:
         php-version: '8.0'
         extensions: dom, curl, libxml, mbstring, zip, pdo, mysql
-        tools: phpcs, composer
+        tools: phpcs
         coverage: none
 
     - name: Check PHP Syntax
       run: |
         find ./src -type f -name '*.php' -print0 | xargs -0 -n1 php -l
-
-    - name: Configure Composer
-      run: |
-        composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-        
-    - name: Install Composer Dependencies
-      run: |
-        composer install --no-interaction --prefer-dist
-
-    - name: Setup PHPCS
-      run: |
-        composer require --dev wp-coding-standards/wpcs
-        phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs
-
-    - name: Run PHPCS
-      run: |
-        phpcs --standard=WordPress ./src --report=summary
 
     - name: Check File Structure
       run: |
@@ -49,3 +32,7 @@ jobs:
         test -d "./src/templates" || (echo "Missing templates directory" && exit 1)
         test -d "./src/assets" || (echo "Missing assets directory" && exit 1)
         test -f "./src/main-plugin.php" || (echo "Missing main plugin file" && exit 1)
+
+    - name: Run PHPCS
+      run: |
+        phpcs --standard=PSR12 ./src

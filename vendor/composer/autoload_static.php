@@ -4,22 +4,8 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit080ccd92a71d2cf9f313465c1bb27976
+class ComposerStaticInit6320f0dc530ad03bd1ff08df29d42a94
 {
-    public static $prefixLengthsPsr4 = array (
-        'D' => 
-        array (
-            'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 55,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dealerdirect/phpcodesniffer-composer-installer/src',
-        ),
-    );
-
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -27,9 +13,7 @@ class ComposerStaticInit080ccd92a71d2cf9f313465c1bb27976
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit080ccd92a71d2cf9f313465c1bb27976::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit080ccd92a71d2cf9f313465c1bb27976::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit080ccd92a71d2cf9f313465c1bb27976::$classMap;
+            $loader->classMap = ComposerStaticInit6320f0dc530ad03bd1ff08df29d42a94::$classMap;
 
         }, null, ClassLoader::class);
     }

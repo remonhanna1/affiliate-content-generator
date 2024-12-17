@@ -6,12 +6,6 @@
         "php": ">=7.4"
     },
     "require-dev": {
-        "wp-coding-standards/wpcs": "^2.3",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0"
-    },
-    "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        }
+        "squizlabs/php_codesniffer": "*"
     }
 }
