@@ -27,9 +27,9 @@ jobs:
         find ./src -type f -name '*.php' -print0 | xargs -0 -n1 php -l
 
     - name: Run PHPCS
-      continue-on-error: true  # This will show errors but not fail the build
+      continue-on-error: true
       run: |
-        phpcs --standard=PSR2 ./src --report=summary --warning-severity=0 --error-severity=10 --ignore=*/vendor/*,*/templates/*,*/assets/* -n
+        phpcs --standard=PSR2 ./src --report=full --warning-severity=0 --error-severity=10 --ignore=*/vendor/*,*/templates/*,*/assets/* -n
 
     - name: Check File Structure
       run: |
