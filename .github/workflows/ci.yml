@@ -29,7 +29,8 @@ jobs:
     - name: Run PHPCS
       continue-on-error: true
       run: |
-        phpcs --standard=PSR2 ./src --report=full --warning-severity=0 --error-severity=10 --ignore=*/vendor/*,*/templates/*,*/assets/* -n
+        phpcs --standard=PSR2 ./src --report=full --warning-severity=0 --error-severity=10 --ignore=*/vendor/*,*/templates/*,*/assets/* -n --report-file=phpcs-report.txt
+        cat phpcs-report.txt
 
     - name: Check File Structure
       run: |
